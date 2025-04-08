@@ -116,19 +116,26 @@ If you have cloned the Git repository, you will first need to generate the
 `configure` file (skip this step if you have downloaded a formal release):
 
 ```bash
-$ autoreconf -i -f
+autoreconf -i -f
 ```
 
 Then:
 
 ```bash
-$ ./configure
+./configure
 ```
+
+OR with mingw32 (--disable-shared --enable-static are optional as you knew):
+
+```bash
+./configure --host=x86_64-w64-mingw32 --disable-shared --enable-static
+```
+
 
 OR for a complete install (requires bison, flex, and unixODBC):
 
 ```bash
-$ ./configure --with-unixodbc=/usr/local
+./configure --with-unixodbc=/usr/local
 ```
 
 By default, MDB Tools is linked against the copy of
