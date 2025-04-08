@@ -162,7 +162,7 @@ with a Unicode-capable driver at /usr/local/lib/odbc/libmdbodbcW.so.
 The command `configure --help` will give you the list of mdbtools specific options.
 
 ```bash
-$ make
+make
 ```
 
 Once MDB Tools has been compiled, libmdb.[so|a] will be in the src/libmdb 
@@ -171,14 +171,14 @@ directory and the utility programs will be in the src/util directory.
 You can then install (to /usr/local by default) by running the following as root:
 
 ```bash
-$ make install
+make install
 ```
 
 Some systems will also need the ld cache to be updated after installation;
 You can do that running:
 
 ```bash 
-$ ldconfig
+ldconfig
 ```
 
 ## Hacking
